@@ -23,8 +23,5 @@ int main(int argc, char *argv[]) {
     program.close();
     cpu.Run();
 
-    //cout << cpu.IR.word.to_ulong() << endl;
-    //cout << cpu.ACC.word.to_ulong() << endl;
-
     return 0;
 }
