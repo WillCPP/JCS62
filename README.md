@@ -1,4 +1,4 @@
-![JEE Logo](/images/logo.png)
+![JEE Logo](/images/logo-JEE.png) ![JEE Logo](/images/logo-JCS62.png)
 
 This emulator emulates the functionality of the JCS62 CPU with an extended instruction set.
 
