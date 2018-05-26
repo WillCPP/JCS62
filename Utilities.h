@@ -35,7 +35,8 @@ namespace IS {
     bitset<4>const MBA(0b0101);
     bitset<4>const JMP(0b0110);
     bitset<4>const JN(0b0111);
-    bitset<4>const HLT(0b1000); // >= 0b1000 yields HLT
+    bitset<4>const HLT(0b1000);
+    bitset<4>const LAI(0b1001);
 }
 
 #endif //JCS62_UTILITIES_H

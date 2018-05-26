@@ -58,6 +58,11 @@ void JCS62::DecodeInstruction() {
         cout << "HLT" << endl;
         Halt();
     }
+    else if (opcode == IS::LAI){
+        //HLT
+        cout << "LAI" << endl;
+        LoadAImmediate(operand);
+    }
 
     return;
 }
@@ -98,6 +103,9 @@ void JCS62::JumpIfNegative(bitset<8> operand) {
 void JCS62::Halt() {
     //do something
     Halt_Flag = true;
+}
+void JCS62::LoadAImmediate(bitset<8> operand) {
+    ACC.word = bitset<12>(operand.to_ulong());
 }
 
 // Signals

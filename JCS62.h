@@ -40,6 +40,9 @@ public:
     void JumpIfNegative(bitset<8> operand);
     void Halt();
 
+    // Extended Instructions
+    void LoadAImmediate(bitset<8> operand);
+
     // Signals
     void LoadIR();
     void IncrementPC();
