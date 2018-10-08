@@ -60,7 +60,7 @@ void JCS62::DecodeInstruction() {
     }
     else if (opcode == IS::LAI){
         //HLT
-        cout << "LAI" << endl;
+        cout << "LAI" << " " << operand.to_ulong() << endl;
         LoadAImmediate(operand);
     }
 
@@ -86,7 +86,10 @@ void JCS62::AddBtoA() {
 void JCS62::SubBfromA() {
     auto a = ACC.word.to_ulong();
     auto b = B.word.to_ulong();
-    ACC.word = (a - b < 4096 ? a - b : ULONG_MAX - (a - b));
+    auto c = a - b;
+    auto d = (a - b < 4096 ? a - b : ULONG_MAX - (a - b));
+    auto u = ULONG_MAX;
+    ACC.word = (a - b < 4096 ? a - b : ULONG_MAX - (a - b) + 4095);
 }
 void JCS62::MoveAtoB() {
     B.word = ACC.word;

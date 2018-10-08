@@ -23,5 +23,8 @@ int main(int argc, char *argv[]) {
     program.close();
     cpu.Run();
 
+    cout << cpu.ACC.word.to_string() << endl;
+    cout << cpu.RAM[161].to_ulong() << endl;
+
     return 0;
 }
